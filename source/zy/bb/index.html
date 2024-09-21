@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平方根计算</title>
+</head>
+
+<body>
+  <h1>平方根计算</h1>
+  <input type="number" id="numInput">
+  <button onclick="calculate()">计算</button>
+  <div id="result"></div>
+
+  <script>
+    function calculate() {
+      let num = parseFloat(document.getElementById('numInput').value);
+      let resultDiv = document.getElementById('result');
+
+      if (num >= 0) {
+        let squareRoot = Math.sqrt(num);
+        resultDiv.innerHTML = squareRoot;
+      } else {
+        resultDiv.innerHTML = "输入的数为负数，没有实数平方根";
+      }
+    }
+  </script>
+  <a href="../index.html">返回主页</a>
+  </body>
+
+</html>

@@ -6,4 +6,8 @@ permalink: index.html
 ---
 
 
-123345647
+[地铁查询页面](zy/dt/index.html)
+[平方根计算页面](zy/bb/index.html)
+[书签导航](zy/shuqian/index.html)
+[李均宇班级学号页面](zy/jy/index.html)
+[地铁查询页面](zy/dt/index.html)
