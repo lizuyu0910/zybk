@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>人格测试</h1>
+  <p>一共有 2、1、0、-1、-2，5 种级别。</p>
+  <p>2超级同意，1比较同意，0中间，-1比较反对，-2超级反对。</p>  
+  <button onclick="startTest()">开始测试</button>
+  <p id="result"></p>
+
+  <script>
+    function startTest() {
+      let a, b, c, d, e, f, g, h, i, j, k;
+      let resultDiv = document.getElementById('result');
+      resultDiv.textContent = "人格测试，1 秒后开始";
+      setTimeout(() => {
+        let validValues = ["2", "1", "0", "-1", "-2"];
+        a = promptQuestion("1.你经常交新朋友", validValues);
+        b = promptQuestion("2.你的生活与工作空间整洁有序", validValues);
+        c = promptQuestion("3.你通常会保持冷静，即使在很大的压力下", validValues);
+        d = promptQuestion("4.你喜欢使用日程表和清单等组织工具", validValues);
+        e = promptQuestion("5.即使是一个小错误也会让你怀疑自己的整体能力和知识水平", validValues);
+        f = promptQuestion("6.你对讨论创意作品的各种解读不太感兴趣", validValues);
+        g = promptQuestion("7.你经常在毫无计划的情况下开展一天的工作", validValues);
+        h = promptQuestion("8.你很少担心你是否给人留下好印象", validValues);
+        i = promptQuestion("9.你喜欢参加团体活动", validValues);
+        j = promptQuestion("10.你积极寻求探索新的东西", validValues);
+        k = promptQuestion("11.你往往会担心事情会朝着更糟糕的方向发展", validValues);
+
+        if (!validValues.includes(a) ||!validValues.includes(b) ||!validValues.includes(c) ||!validValues.includes(d) ||!validValues.includes(e) ||!validValues.includes(f) ||!validValues.includes(g) ||!validValues.includes(h) ||!validValues.includes(i) ||!validValues.includes(j) ||!validValues.includes(k)) {
+          resultDiv.textContent = "请输入有效的值（2、1、0、-1、-2）。";
+          return;
+        }
+
+        determinePersonality(a, b, c, d, e, f, g, h, i, j, k);
+      }, 1000);
+    }
+
+    function promptQuestion(question, validValues) {
+      let answer;
+      do {
+        answer = prompt(question);
+      } while (!validValues.includes(answer));
+      return answer;
+    }
+
+    function determinePersonality(a, b, c, d, e, f, g, h, i, j, k) {
+      let resultDiv = document.getElementById('result');
+      if (c === "-2" || k === "2" || c === "-1" || e === "2") {
+        resultDiv.textContent = "精神分裂";
+      } else if (c === "0" || g === "1" || g === "2" || k === "1") {
+        resultDiv.textContent = "精神病";
+      } else if (b === "-1" || b === "-2" || b === "0" || e === "1" || d === "0" || g === "-1" || g === "-2" || h === "2" || h === "1" || h === "0" || i === "-2" || i === "-1") {
+        resultDiv.textContent = "抑郁症";
+      } else if (a === "-2" || a === "-1" || a === "0" || d === "-1" || d === "-2" || f === "1" || f === "2" || j === "-2" || j === "-1") {
+        resultDiv.textContent = "严重内向";
+      } else if (a === "2" || b === "1" || c === "1" || d === "2" || e === "0" || e === "-2" || f === "-1" || f === "-2" || h === "-2" || i === "1" || i === "2" || j === "0" || j === "1" || k === "0" || k === "-2") {
+        resultDiv.textContent = "社牛";
+      } else if (a === "1" && b === "2" && c === "2" && d === "1" && e === "-1" && f === "0" && g === "0" && h === "-1" && i === "0" && j === "2" && k === "-1") {
+        resultDiv.textContent = "守卫者";
+      } else {
+        resultDiv.textContent = "精神已分裂";
+      }
+    }
+  </script>
+  <li><a href="../index.html">返回主页</a></li>
+</body>
+
+</html>
