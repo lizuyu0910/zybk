@@ -13,7 +13,7 @@
     
     <categories>
       
-      <category>C++学习</category>
+      <category>C++</category>
       
     </categories>
     
@@ -42,6 +42,25 @@
       <tag>-学习笔记 -C语言</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文章的写法</title>
+    <link href="/2024/09/22/C++%E5%AD%A6%E4%B9%A0/%E5%86%99%E6%96%87%E7%AB%A0/"/>
+    <url>/2024/09/22/C++%E5%AD%A6%E4%B9%A0/%E5%86%99%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>C++</category>
+      
+    </categories>
+    
     
   </entry>
   
@@ -77,25 +96,6 @@
     <categories>
       
       <category>代码命令</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>样板文章</title>
-    <link href="/2023/09/23/C++%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E6%9D%BF/"/>
-    <url>/2023/09/23/C++%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E6%9D%BF/</url>
-    
-    <content type="html"><![CDATA[<h1 id="装hexo-装不上-最后使用-yarn才能成功"><a href="#装hexo-装不上-最后使用-yarn才能成功" class="headerlink" title="装hexo 装不上,最后使用 yarn才能成功"></a>装hexo 装不上,最后使用 yarn才能成功</h1><ol><li><p><strong>切换回默认 npm 注册表</strong>：</p><p> 在命令行中，使用以下命令切换回默认的 npm 注册表：</p> <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino">shell<br><br>npm config set registry https:<span class="hljs-comment">//registry.npmjs.org</span><br><br></code></pre></td></tr></table></figure><p> 然后再次尝试全局安装 Hexo：</p> <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">shell</span><br><span class="hljs-keyword"></span><br>npm <span class="hljs-keyword">install </span>-g hexo-cli<br><br></code></pre></td></tr></table></figure></li><li><p><strong>使用国内镜像</strong>：</p><p> 除了淘宝镜像，你还可以使用其他的国内镜像源，比如阿里云的镜像源：</p> <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino">shell<br><br>npm config set registry https:<span class="hljs-comment">//registry.npm.taobao.org</span><br><br></code></pre></td></tr></table></figure><p> 如果淘宝镜像不行，你可以尝试阿里云的镜像：</p> <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino">shell<br><br>npm config set registry https:<span class="hljs-comment">//registry.npmmirror.com</span><br><br></code></pre></td></tr></table></figure><p> 或者使用华为云的镜像：</p> <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino">shell<br><br>npm config set registry https:<span class="hljs-comment">//registry.huaweicloud.com</span><br><br></code></pre></td></tr></table></figure><p> 然后再次尝试全局安装 Hexo。</p></li></ol><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><ol><li><p><strong>创建一个文件夹用于存放你的博客</strong>：</p><ul><li><p>打开命令提示符或终端，切换到你想存放 Hexo 博客的目录，然后创建一个新的文件夹，例如：</p>  <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dos"><span class="hljs-built_in">cmd</span><br><br><span class="hljs-built_in">mkdir</span> my-hexo-blog<br><span class="hljs-built_in">cd</span> my-hexo-blog<br><br></code></pre></td></tr></table></figure><p>  或者</p>  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">sh</span><br><span class="hljs-keyword"></span><br>mkdir my-hexo-<span class="hljs-keyword">blog</span><br><span class="hljs-keyword"></span>cd my-hexo-<span class="hljs-keyword">blog</span><br><span class="hljs-keyword"></span><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>全局安装 Hexo</strong>：</p><ul><li><p>在你的博客文件夹中，使用 npm 安装 Hexo：</p>  <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">cmd<br><br>npm install -g hexo-<span class="hljs-keyword">cli</span><br><br></code></pre></td></tr></table></figure><p>  或者</p>  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">sh</span><br><span class="hljs-keyword"></span><br>sudo npm <span class="hljs-keyword">install </span>-g hexo-cli<br><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>初始化 Hexo 博客</strong>：</p><ul><li><p>使用 Hexo 初始化你的博客文件夹：</p>  <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs csharp">cmd<br><br>hexo <span class="hljs-keyword">init</span><br><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>安装依赖</strong>：</p><ul><li><p>进入博客文件夹，然后安装项目依赖：</p>  <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cmake">cmd<br><br>npm <span class="hljs-keyword">install</span><br><br></code></pre></td></tr></table></figure></li></ul></li></ol><h3 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h3><ol><li><p><strong>生成静态文件</strong>：</p><ul><li><p>在你的博客文件夹中，运行以下命令来生成静态文件：</p>  <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs verilog">cmd<br><br>hexo <span class="hljs-keyword">generate</span><br><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>启动本地服务器</strong>：</p><ul><li><p>运行以下命令来启动本地服务器并预览你的博客：</p>  <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs axapta">cmd<br><br>hexo <span class="hljs-keyword">server</span><br><br></code></pre></td></tr></table></figure></li><li><p>打开浏览器并访问 <code>http://localhost:4000</code>。</p></li></ul></li></ol><h3 id="部署到远程服务器"><a href="#部署到远程服务器" class="headerlink" title="部署到远程服务器"></a>部署到远程服务器</h3><ol><li><p>*配置 <code>_config.yml</code>*：</p><ul><li>在你的博客文件夹中，编辑 <code>_config.yml</code> 文件来配置部署信息。</li></ul></li><li><p><strong>安装部署插件</strong>：</p><ul><li><p>安装一个部署插件，比如 <code>hexo-deployer-git</code>：</p>  <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ada">cmd<br><br>npm install hexo-deployer-git <span class="hljs-comment">--save</span><br><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>部署到远程服务器</strong>：</p><ul><li><p>运行以下命令来部署你的博客：</p>  <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">cmd</span><span class="language-bash"></span><br><span class="language-bash"></span><br>hexo deploy<br><br></code></pre></td></tr></table></figure></li></ul></li></ol><p>这样，你就完成了 Hexo 的安装和配置。你可以按照 Hexo 的官方文档来进一步学习如何使用它，包括主题定制、插件使用等。祝你写作愉快！</p><p>用了上面方法都不好用，最后用了阿里云的源，接下来改用这个软件安装才能成功</p><h3 id="使用-yarn"><a href="#使用-yarn" class="headerlink" title="使用 yarn"></a>使用 yarn</h3><p>如果你遇到的问题持续存在，可以考虑使用 yarn 来代替 npm，因为 yarn 通常使用 HTTPS 代理而不是直接连接到 npm 注册表：</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-built_in">shell</span><br><br>npm install -g yarn<br>yarn <span class="hljs-built_in">global</span> <span class="hljs-built_in">add</span> hexo-cli<br><br></code></pre></td></tr></table></figure><p>尝试上述方法之一，应该能够解决你的问题并允许你安装 Hexo。如果问题依旧，你可能需要检查你的网络设置，确保你的网络可以访问外部资源。</p><p>最后再全局安装</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jsx">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><p>最后才成功</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>C++学习</category>
       
     </categories>
     
