@@ -7,7 +7,7 @@ categories:
 
 
 
-# 下载更新使命
+# 下载更新命令
 
 ```
 git pull --rebase origin befe
