@@ -1,8 +1,10 @@
 ---
-title: git源下载到本地记录一个
-date: 2024-09-23 10:00:00
+title: git源下载到本地记录
+date: 2024-09-22 10:00:00
 categories:
-  - C++
+  - GitHub学习
+tags:
+ -学习笔记
 ---
 
 
