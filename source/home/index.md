@@ -6,5 +6,4 @@ permalink: index.html
 ---
 
 
-[我的作品](zy/be/index.html)
 [书签导航](zy/shuqian/index.html)
