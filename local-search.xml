@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>GitHub文章的写法</title>
+    <link href="/2024/09/23/%E6%96%87%E7%AB%A0/%E5%86%99%E6%96%87%E7%AB%A0/"/>
+    <url>/2024/09/23/%E6%96%87%E7%AB%A0/%E5%86%99%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="文章的格式"><a href="#文章的格式" class="headerlink" title="文章的格式"></a>文章的格式</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-number">1</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2</span><br><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><br><span class="hljs-attr">tags:</span><br> <span class="hljs-bullet">-</span> <span class="hljs-number">4</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><p>1处是写文章的名字的<br>2处是写文章的日期的<br>3处是写文章所在的文件夹的名字的，如果不用可以把他给删掉<br>4处是写文章的标签的，如果不用也可以把他给删掉</p><p>例如：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">GitHub文章的写法</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-09-22 </span><span class="hljs-number">15</span><span class="hljs-string">点00分</span><br><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">GitHub学习</span><br><span class="hljs-attr">tags:</span><br> <span class="hljs-string">-学习笔记</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><p>有时候想要把一段很重要的东西更明显，而且还可以让看的人很方便的就可以将他拷贝出来<br>可以这样做：</p><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scheme">```<br></code></pre></td></tr></table></figure><p>123456</p><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scheme">```<br></code></pre></td></tr></table></figure><p>部署后中间的123456右上角就会有拷贝的提示</p><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>谢谢观看！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>GitHub学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>-学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git源下载到本地记录</title>
+    <link href="/2024/09/22/%E6%96%87%E7%AB%A0/git%E6%BA%90%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%9C%AC%E5%9C%B0%E8%AE%B0%E5%BD%95/"/>
+    <url>/2024/09/22/%E6%96%87%E7%AB%A0/git%E6%BA%90%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%9C%AC%E5%9C%B0%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="下载更新命令"><a href="#下载更新命令" class="headerlink" title="下载更新命令"></a>下载更新命令</h1><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git pull <span class="hljs-comment">--rebase origin befe</span><br></code></pre></td></tr></table></figure><h1 id="如果出现以下这些情况"><a href="#如果出现以下这些情况" class="headerlink" title="如果出现以下这些情况"></a>如果出现以下这些情况</h1><p>git pull –rebase origin befe<br>error: cannot pull with rebase: You have unstaged changes.<br>error: Please commit or stash them.</p><p>这个错误信息 error: cannot pull with rebase: You have unstaged changes. error: Please commit or stash them. 意味着在你尝试使用 git pull –rebase 命令从远程仓库拉取更新到本地分支 befe 之前，你的本地工作区中有一些未提交的更改。</p><p>这里的具体解释如下：</p><p><strong>You have unstaged changes</strong>：这表示在你的工作区中有文件被修改了，但这些更改还没有被添加到 Git 的暂存区（staging area）。暂存区是 Git 中一个用于存放你打算下次提交的更改的地方。</p><p><strong>Please commit or stash them</strong>：Git 在这里提示你需要先提交这些更改（commit），或者将它们储藏（stash）起来，以便能够继续执行变基操作。</p><p>储藏更改<br>如果你不想立即提交更改，或者这些更改不应该与当前的变基操作一起提交，你可以将它们储藏起来：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git stash</span><br></code></pre></td></tr></table></figure><h1 id="再执行下面的命令就可以了"><a href="#再执行下面的命令就可以了" class="headerlink" title="再执行下面的命令就可以了"></a>再执行下面的命令就可以了</h1><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git pull <span class="hljs-comment">--rebase origin befe</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>GitHub学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>-学习笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>首页</title>
+    <link href="/2023/09/23/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/"/>
+    <url>/2023/09/23/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</url>
+    
+    <content type="html"><![CDATA[<p><a href="zy/be/index.html"></a><br><a href="zy/shuqian/index.html"></a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>我的作品</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>�ҵ���Ʒ</title>
+    <link href="/2023/09/22/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/"/>
+    <url>/2023/09/22/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/</url>
+    
+    <content type="html"><![CDATA[<p><a href="zy/dt/index.html">������ѯҳ��</a><br><a href="zy/shj/index.html">ʱ��ҳ��</a><br><a href="zy/bb/index.html">ƽ��������ҳ��</a><br><a href="zy/jy/index.html">�����༶ѧ��ҳ��</a><br><a href="zy/mbti/index.html">mbti�˸����ҳ��</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>�ҵ���Ʒ</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
