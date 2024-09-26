@@ -27,37 +27,6 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
         </a>
       </h2>
 
-      <% var excerpt = post.description || post.excerpt || (theme.index.auto_excerpt.enable && !post.encrypt && post.content) %>
-      <a class="index-excerpt <%= index_img ? '' : 'index-excerpt__noimg' %>" href="<%= post_url %>" target="<%- theme.index.post_url_target %>">
-        <div>
-          <%- strip_html(excerpt).substring(0, 200).trim().replace(/\n/g, ' ') %>
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        <% if (theme.index.post_meta.date) { %>
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
-              <%- date(post.date, config.date_format) %>
-            </time>
-          </div>
-        <% } %>
-        <% if (theme.index.post_meta.category && post.categories.length > 0) { %>
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            <%- partial('_partials/category-chains', { categories: post.categories, limit: 1 }) %>
-          </div>
-        <% } %>
-        <% if (theme.index.post_meta.tag && post.tags.length > 0) { %>
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            <% post.tags.each(function(tag){ %>
-              <a href="<%= url_for(tag.path) %>">#<%- tag.name %></a>
-            <% }) %>
-          </div>
-        <% } %>
-      </div>
     </article>
   </div>
 <% }) %>
