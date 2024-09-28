@@ -110,7 +110,7 @@ Fluid.plugins = {
 
     var copyTmpl = '';
     copyTmpl += '<div class="code-widget">';
-    copyTmpl += 'LANG';
+    copyTmpl += '<span>一键复制</span>';
     copyTmpl += '</div>';
     jQuery('.markdown-body pre').each(function() {
       var $pre = jQuery(this);
@@ -129,7 +129,8 @@ Fluid.plugins = {
           lang = $pre[0].children[0].classList[1];
         } else if ($pre[0].getAttribute('data-language')) {
           lang = $pre[0].getAttribute('data-language');
-        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+        } 
+		else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
           lang = $pre[0].children[0].classList[1];
           $pre.parent().addClass('code-wrapper');
         } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
@@ -151,13 +152,13 @@ Fluid.plugins = {
             }
           }
         });
-        clipboard.on('success', function(e) {
-          e.clearSelection();
-          e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
-          setTimeout(function() {
-            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
-          }, 2000);
-        });
+clipboard.on('success', function(e) {
+  e.clearSelection();
+  e.trigger.innerHTML = '复制成功';  // 复制成功后显示的文字
+  setTimeout(function() {
+    e.trigger.innerHTML = '<i class="iconfont icon-copy"></i>一键复制';  // 恢复成原始的复制按钮
+  }, 2000);
+});
       }
     });
   }

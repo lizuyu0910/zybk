@@ -1,4 +1,4 @@
-#---------------------------
+﻿#---------------------------
 # Hexo Theme Fluid  20240915备份
 # Author: Fluid-dev
 # Github: https://github.com/fluid-dev/hexo-theme-fluid
@@ -63,7 +63,7 @@ code:
       # 在链接中挑选 style 填入
       # Select a style in the link
       # See: https://highlightjs.org/demo/
-      style: "github gist"
+      style: "github dark dimmed"
       style_dark: "dark"
 
     prismjs:
@@ -240,7 +240,8 @@ custom_js:
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
-
+   - /css/macpanel
+   - /css/code-pretty
 # 网页访问统计
 # Analysis of website visitors
 web_analytics:
@@ -374,6 +375,18 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: 'links', link: '/links/', icon: 'iconfont icon-github-fill' }
+    - {
+      key: '学习',
+      icon: 'iconfont icon-books',
+      submenu: [
+        { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/', icon: 'iconfont icon-zhihu-fill' },
+        { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/',  icon: 'iconfont icon-twitter-fill'}
+      ]
+  }
+
+
+
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
 search:
@@ -446,9 +459,11 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://24.lifu.us.kg" target="_blank" rel="nofollow noopener"><span>保持博客</span></a>
+    <a href="https://lifu.us.kg" target="_blank" rel="nofollow noopener"><span>李保博客</span></a>
+    <i class="iconfont icon-love"></i>   
     <i class="iconfont icon-love"></i>
-    <a href="https://23.lifu.us.kg" target="_blank" rel="nofollow noopener"><span>2023博客</span></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://23.lifu.us.kg" target="_blank" rel="nofollow noopener"><span>2023旧博客</span></a>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -528,8 +543,9 @@ index:
   # 自动截取文章摘要
   # Auto extract post
   auto_excerpt:
-    enable: true
-
+#  enable: false  开或者关 enable 的 false 或 true  length: 高度
+   enable: true
+   length: 200
   # 打开文章的标签方式
   # The browser tag to open the post
   # Available: _blank | _self
@@ -1029,9 +1045,9 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
+      title: " zuyu.us.kg",
+      intro: "祖宇博客",
+      link: "https://zuyu.us.kg/",
       avatar: "/img/favicon.png"
     }
     - {
