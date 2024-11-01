@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>时间页面</title>
+    <link href="/2024/11/01/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/%E6%97%B6%E9%97%B4%E9%A1%B5%E9%9D%A2/"/>
+    <url>/2024/11/01/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/%E6%97%B6%E9%97%B4%E9%A1%B5%E9%9D%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="我的时间页面"><a href="#我的时间页面" class="headerlink" title="我的时间页面"></a>我的时间页面</h1><!DOCTYPE html><html><head>  <style>    body {      font-family: Arial, sans-serif;    }  </style></head><body>  <p id="timeDisplay"></p>  <script>    function printTimeWithLeadingZero() {      const weekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];      const now = new Date();      const year = now.getFullYear();      const month = now.getMonth() + 1;      const day = now.getDate();      const hour = now.getHours();      const minute = now.getMinutes();      const second = now.getSeconds();      const weekday = weekdays[now.getDay()];      const timeString = weekday + " " + year + "年" + month + "月" + day + "日 " + (hour < 10? "0" : "") + hour + ":" + (minute < 10? "0" : "") + minute + ":" + (second < 10? "0" : "") + second;      return timeString;    }    setInterval(() => {      document.getElementById('timeDisplay').textContent = printTimeWithLeadingZero();    }, 1000);  </script>  <li><a href="/2024/09/23/我的作品/我的作品/">返回主页</a></li></body></html>]]></content>
+    
+    
+    <categories>
+      
+      <category>我的代码</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我的c++作品代码</title>
     <link href="/2024/09/28/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/c++%E4%BD%9C%E5%93%81(%E4%BB%A3%E7%A0%81)/"/>
     <url>/2024/09/28/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/c++%E4%BD%9C%E5%93%81(%E4%BB%A3%E7%A0%81)/</url>
