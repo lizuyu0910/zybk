@@ -1,6 +1,9 @@
 ﻿---
 title: 看自己的DEV-C++是c++几
 date: 2024-09-28 17:59:00
+categories:
+ - 我的代码
+tags:
 ---
 
 
