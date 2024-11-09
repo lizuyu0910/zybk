@@ -11,5 +11,4 @@ git commit -m "当前文件最新时间是${current_date}_上传"
 # 推送到远程仓库的 befe 分支
 git push origin befe
 
-git push origin main
 
